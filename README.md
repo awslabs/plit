@@ -5,6 +5,19 @@ of writing boilerplate code while maintaining the power and feel of Matplotlib.
 
 ## Installation
 
+### Install in your current environment
+
+```
+git clone https://github.com/awslabs/plit.git
+cd plit
+pip3 install -e .
+```
+
+### Example of install within a virtual environment
+
+It is recommended to install within a virtual environment. Here is an example
+of how to install within a conda environment.
+
 ```
 git clone https://github.com/awslabs/plit.git
 conda create -n py37 python=3.7
@@ -13,15 +26,7 @@ cd plit
 pip3 install -e .
 ```
 
-## Gallery
-
-![Model Calibration](figures/calibration.png)
-
-![Accuracy vs Coverage](figures/acc_vs_cov.png)
-
-![Precision Recall Curve](figures/precision_recall.png)
-
-## Quick Start
+## Usage 
 
 See the [quick-start notebook](notebooks/quick-start.ipynb).
 
