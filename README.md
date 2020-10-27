@@ -14,12 +14,12 @@ The best way to get started is to look at the examples.
 - [creating-templates-file](notebooks/creating-templates.ipynb) demonstrates
   how to use partial functions to simplify and streamline your visualization
 workflow.
-- [accuracy-vs-coverage](accuracy-vs-coverage.ipynb) shows an illustrative
+- [accuracy-vs-coverage](notebooks/accuracy-vs-coverage.ipynb) shows an illustrative
   example using a template created for visualizing accuracy and coverage.
-- [precision-vs-recall](precision-vs-recall.ipynb) shows an illustrative
+- [precision-vs-recall](notebooks/precision-vs-recall.ipynb) shows an illustrative
   example using a template created for choosing a threshold using precision and
 recall. 
-- [softmax-calibration](softmax-calibration.ipynb) shows an illustrative
+- [softmax-calibration](notebooks/softmax-calibration.ipynb) shows an illustrative
   example using a template created for evaluating the calibration for softmax
 output. 
 
