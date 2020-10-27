@@ -1,0 +1,6 @@
+tox
+sphinx
+pydocstyle
+flake8
+black
+pre-commit
