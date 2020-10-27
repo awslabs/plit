@@ -78,12 +78,11 @@ that come out of the box include multiple series, flexible specification of
 differing marker types and colors, and mandatory legends. 
 3. *Combine charts in arbitrary ways within the same figure grid, or use them on their own.*
 4. *Templates for tasks in in analysis/evaluation/interpretation that are common for 
-many projects. *For example, calibrating the softmax output from a ML model, or
+many projects.* For example, calibrating the softmax output from a ML model, or
 choosing cutoff thresholds with precision/recall curves. 
-5. *Graphs are close to publication quality out of the box.*
-This means that have sensible defaults for things like figure size, font
-sizes, marker size, DPI, etc....You may want to add your own styling and
-customizations.
+5. *Graphs are close to publication quality out of the box.* This means that
+   have sensible defaults for things like figure size, font sizes, marker size,
+DPI, etc....You may want to add your own styling and customizations.
 
 **Q: What functionality is included in `plit` core wrapper?**
 
