@@ -3,9 +3,29 @@
 `plit` is a Matplotlib wrapper that automates the undifferentiated heavy-lifting
 of writing boilerplate code while maintaining the power and feel of Matplotlib. 
 
+## Usage 
+
+The best way to get started is to look at the examples.
+
+- [quick-start notebook](notebooks/quick-start.ipynb) gives an overview of core
+  functionality including creating core chart types.
+- [plit-vs-matplotlib](notebooks/plit-vs-matplotlib.ipynb) shows the difference
+  between matplotlib and plit with a simple example.
+- [creating-templates-file](notebooks/creating-templates.ipynb) demonstrates
+  how to use partial functions to simplify and streamline your visualization
+workflow.
+- [accuracy-vs-coverage](accuracy-vs-coverage.ipynb) shows an illustrative
+  example using a template created for visualizing accuracy and coverage.
+- [precision-vs-recall](precision-vs-recall.ipynb) shows an illustrative
+  example using a template created for choosing a threshold using precision and
+recall. 
+- [softmax-calibration](softmax-calibration.ipynb) shows an illustrative
+  example using a template created for evaluating the calibration for softmax
+output. 
+
 ## Installation
 
-### Install in your current environment
+### Install 
 
 ```
 git clone https://github.com/awslabs/plit.git
@@ -13,7 +33,7 @@ cd plit
 pip3 install -e .
 ```
 
-### Example of install within a virtual environment
+### Install within a virtual environment
 
 It is recommended to install within a virtual environment. Here is an example
 of how to install within a conda environment.
@@ -25,10 +45,6 @@ conda activate py37
 cd plit
 pip3 install -e .
 ```
-
-## Usage 
-
-See the [quick-start notebook](notebooks/quick-start.ipynb).
 
 ## FAQ
 
@@ -89,4 +105,4 @@ blog post, or white paper. The second way is to provide feedback. Looking for
 feedback from Matplotlib users and non Matplotlib users. Want to understand how
 it makes your life easier and what challenges or limitations you run into. The
 last way is to contribute to it. Submit a snippet of code for a recent
-visualization you did along with a small publicly available dataset. 
+visualization you did along with a dataset.
