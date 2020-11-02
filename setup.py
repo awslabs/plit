@@ -1,13 +1,36 @@
 from setuptools import find_packages, setup
+import os
+import versioneer
+
+
+def read(fname):
+    """Read content on file name."""
+    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+
 
 setup(
     name="plit",
-    packages=find_packages(where="plit"),
-    package_dir={"": "plit"},
-    version="0.1.0",
-    description="""A distribution of publication quality, static, ML-specific,
-    data visualization templates built on Matplotlib.""",
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
+    version=versioneer.get_version(),
+    cmdclass=versioneer.get_cmdclass(),
+    description="A wrapper for automating common matplotlib tasks",
+    long_description=read("README.md"),
+    url="https://github.com/awslabs/plit",
+    keywords="visualization data science analytics analysis matplotlib",
     author="Josiah Davis",
     license="Apache 2.0",
+    classifiers=[
+        "Development Status :: 3 - Alpha",
+        "Environment :: Console",
+        "Intended Audience :: Developers",
+        "Intended Audience :: Science/Research",
+        "License :: OSI Approved :: MIT License",
+        "Natural Language :: English",
+        "Programming Language :: Python :: 3 :: Only",
+        "Topic :: Scientific/Engineering :: Artificial Intelligence",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+    ],
+    python_requires=">=3.6.0",
     install_requires=["matplotlib"],
 )
