@@ -16,7 +16,7 @@ The best way to get started is to look at the examples.
 workflow.
 - [accuracy-vs-coverage](notebooks/accuracy-vs-coverage.ipynb) shows an illustrative
   example using a template created for visualizing accuracy and coverage.
-- [precision-vs-recall](notebooks/precision-vs-recall.ipynb) shows an illustrative
+- [precision-vs-recall](notebooks/precision-recall-curve.ipynb) shows an illustrative
   example using a template created for choosing a threshold using precision and
 recall. 
 - [softmax-calibration](notebooks/softmax-calibration.ipynb) shows an illustrative
