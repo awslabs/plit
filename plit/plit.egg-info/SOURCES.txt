@@ -1,7 +1,0 @@
-README.md
-setup.py
-plit/plit.egg-info/PKG-INFO
-plit/plit.egg-info/SOURCES.txt
-plit/plit.egg-info/dependency_links.txt
-plit/plit.egg-info/requires.txt
-plit/plit.egg-info/top_level.txt
