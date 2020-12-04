@@ -32,7 +32,7 @@ try:
         _git_root_p: Path = Path(_git_root)
         _pythonpath += [
             sys_path_append(_git_root_p),  # GIT_ROOT
-            sys_path_append(_git_root_p / "plit"),  # GIT_ROOT/plit
+            sys_path_append(_git_root_p / "src"),  # GIT_ROOT/src
             sys_path_append(_git_root_p / "notebooks"),  # GIT_ROOT/notebooks
         ]
 except:  # noqa: E722
