@@ -18,7 +18,7 @@ import os
 
 import yaml
 
-with open("config/general.yaml") as file:
+with open("../config/general.yaml") as file:
     config = yaml.load(file, Loader=yaml.FullLoader)
 
 COLORS = config["colors"]
