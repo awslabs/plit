@@ -1,12 +1,13 @@
 ## `plit`
 
-`plit` is a Matplotlib wrapper that automates the undifferentiated heavy-lifting
-of writing boilerplate code while maintaining the power and feel of Matplotlib. 
+`plit` is a [Matplotlib](https://matplotlib.org/) wrapper that automates the
+undifferentiated heavy-lifting of writing boilerplate code while maintaining
+the power and feel of Matplotlib. 
 
 There are two components to `plit`:
-* Wrappers around core chart types for standard line, scatter, histograms, and
+* **Wrappers** around core chart types for standard line, scatter, histograms, and
   bar charts.
-* Templates that are built from these primatives for specific analytic tasks.
+* **Templates** that are built from these primatives for specific analytic tasks.
 
 Here is an example chart created with `plit`:
 
