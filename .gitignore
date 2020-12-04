@@ -1,3 +1,6 @@
+# Mac 
+.DS_Store
+
 # testing
 .pytest_cache/
 
