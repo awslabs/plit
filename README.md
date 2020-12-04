@@ -17,7 +17,7 @@ See the [PRFAQ](PRFAQ.md) for more information.
 
 ## Install
 
-```
+```Python
 git clone https://github.com/awslabs/plit.git
 cd plit
 pip install -r requirements.txt
@@ -26,7 +26,7 @@ pip install .
 
 Note: if you would like to install within a virtual environment, you can use:
 
-```
+```Python
 conda create -n py37 python=3.7
 conda activate py37
 ```
@@ -42,7 +42,7 @@ included in `plit`:
 
 ### Create a line chart 
 
-```
+```Python
 import numpy as np
 x = [np.arange(10)]
 y = [np.random.random(size=(10,1)) for _ in range(4)]
@@ -54,7 +54,7 @@ plot(x, y, list("ABCD"), 'X', 'Y');
 
 ### Create a scatter chart
 
-```
+```Python
 from plit import plot
 
 x = [np.random.random(size=(10,1)) for _ in range(4)]
@@ -63,7 +63,7 @@ plot(x, y, list("ABCD"), 'X', 'Y', marker_type='o')
 
 ### Create a histogram
 
-```
+```Python
 from plit import hist
 
 x = [np.random.normal(size=(100,1)), np.random.gamma(shape=1, size=(100,1)) - 2]
@@ -72,7 +72,7 @@ hist(x, list("AB"), 'X', title='Histogram', bins=20)
 
 ### Create a bar chart
 
-```
+```Python
 from plit import bar
 
 x = [f"Group {i+1}"for i in range(6)]
