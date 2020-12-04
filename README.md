@@ -20,7 +20,8 @@ See the [PRFAQ](PRFAQ.md) for more information.
 ```
 git clone https://github.com/awslabs/plit.git
 cd plit
-pip3 install -e .
+pip install -r requirements.txt
+pip install .
 ```
 
 Note: if you would like to install within a virtual environment, you can use:
