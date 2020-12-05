@@ -1,0 +1,11 @@
+{
+  "colors": [
+    "k",
+    "g",
+    "b",
+    "r",
+    "c"
+  ],
+  "stylesheet": "../config/default.mplstyle",
+  "visual_dir": "../figures"
+}
