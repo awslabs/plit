@@ -20,7 +20,6 @@ import json
 
 with open("../config/general.json") as file:
     config = json.load(file)
-    print(f"config = {config}")
 
 COLORS = config["colors"]
 VISUAL_DIR = config["visual_dir"]
