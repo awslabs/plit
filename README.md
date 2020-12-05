@@ -24,23 +24,19 @@ pip install -r requirements.txt
 pip install .
 ```
 
-Note: if you would like to install within a virtual environment, you can use:
-
-```Python
-conda create -n py37 python=3.7
-conda activate py37
-```
-
 ## Quick Start 
 
 The best place to get started is the wrappers. There are three main wrappers
-included in `plit`:
+included in `plit`. The naming is consistent with matplotlib. They work with
+multi-series by default.
 
 * `plot`: for line and scatter charts.
 * `hist`: for histograms.
 * `bar`: for bar charts.
 
 ### Create a line chart 
+
+Create a line and scatter chart using the `plot` function.
 
 ```Python
 import numpy as np
@@ -54,6 +50,8 @@ plot(x, y, list("ABCD"), 'X', 'Y');
 
 ### Create a scatter chart
 
+By simply changing the `marker_type='o'` you switch from line to scatter chart.
+
 ```Python
 from plit import plot
 
@@ -63,6 +61,8 @@ plot(x, y, list("ABCD"), 'X', 'Y', marker_type='o')
 
 ### Create a histogram
 
+Create a histogram using the `hist` function.
+
 ```Python
 from plit import hist
 
@@ -71,6 +71,8 @@ hist(x, list("AB"), 'X', title='Histogram', bins=20)
 ```
 
 ### Create a bar chart
+
+Create a grouped bar chart with the `bar` function.
 
 ```Python
 from plit import bar
