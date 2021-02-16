@@ -1,4 +1,4 @@
-## Press Release
+# Press Release
 
 Now Data Scientists and Analysts can quickly create ML and statistical data
 visualizations for their presentations, papers, and blog posts. `plit` provides
@@ -9,7 +9,7 @@ templates for common tasks in Statistics and ML including precision recall
 curves, model calibration, model accuracy/coverage and more. `plit` empowers Data
 Scientist and Analysts to interpret their results and tell their story.
 
-## FAQ
+# FAQ
 
 **Q: What is matplotlib?**
 
@@ -77,4 +77,4 @@ many line charts you create in the course of a project and on top of that all
 of the additional customizations you might add to it and you quickly see how
 the code can become unwieldy.
 
-![](figures/plit_matplotlib.png)
+![](https://github.com/awslabs/plit/raw/main/figures/plit_matplotlib.png)

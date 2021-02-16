@@ -4,10 +4,6 @@
 """Base functionality for three different types of charts.
 
 Includes plot (for line chart and scatter), hist, and bar.
-
-    Todo:
-        * test out plotting arrays of arrays
-        * make sure time series works with line chart
 """
 
 from functools import partial

@@ -1,4 +1,4 @@
-## `plit`
+# plit
 
 `plit` is a [Matplotlib](https://matplotlib.org/) wrapper that automates the
 undifferentiated heavy-lifting of writing boilerplate code while maintaining
@@ -11,11 +11,11 @@ There are two components to `plit`:
 
 Here is an example chart created with `plit`:
 
-![](figures/calibration.png)
+![](https://github.com/awslabs/plit/raw/main/figures/calibration.png)
 
 See the [PRFAQ](PRFAQ.md) for more information.
 
-## Install
+# Install
 
 ```Python
 git clone https://github.com/awslabs/plit.git
@@ -24,7 +24,7 @@ pip install -r requirements.txt
 pip install .
 ```
 
-## Quick Start 
+# Quick Start 
 
 The best place to get started is the wrappers. There are three main wrappers
 included in `plit`. The naming is consistent with matplotlib. They work with
@@ -34,7 +34,7 @@ multi-series by default.
 * `hist`: for histograms.
 * `bar`: for bar charts.
 
-### Create a line chart 
+## Create a line chart 
 
 Create a line and scatter chart using the `plot` function.
 
@@ -48,7 +48,7 @@ from plit import plot
 plot(x, y, list("ABCD"), 'X', 'Y');
 ```
 
-### Create a scatter chart
+## Create a scatter chart
 
 By simply changing the `marker_type='o'` you switch from line to scatter chart.
 
@@ -59,7 +59,7 @@ x = [np.random.random(size=(10,1)) for _ in range(4)]
 plot(x, y, list("ABCD"), 'X', 'Y', marker_type='o')
 ```
 
-### Create a histogram
+## Create a histogram
 
 Create a histogram using the `hist` function.
 
@@ -70,7 +70,7 @@ x = [np.random.normal(size=(100,1)), np.random.gamma(shape=1, size=(100,1)) - 2]
 hist(x, list("AB"), 'X', title='Histogram', bins=20)
 ```
 
-### Create a bar chart
+## Create a bar chart
 
 Create a grouped bar chart with the `bar` function.
 
