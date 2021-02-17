@@ -32,5 +32,4 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
     python_requires=">=3.6.0",
-    install_requires=["matplotlib"],
 )
