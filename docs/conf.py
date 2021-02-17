@@ -15,9 +15,10 @@ import sys
 
 # sys.path.insert(0, os.path.abspath(".."))
 sys.path.insert(0, os.path.abspath("../.."))
-print(f"1: PATH IS {sys.path}")
+print(f"sys.path = {sys.path}")
+print(f"os.listdir('.') = {os.listdir('.')}")
+print(f"os.listdir('..') = {os.listdir('..')}")
 autodoc_mock_imports = ["numpy", "matplotlib"]
-print(f"2: PATH IS {sys.path}")
 # -- Project information -----------------------------------------------------
 
 project = "plit"
