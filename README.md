@@ -86,18 +86,18 @@ bar(x, y, list("AB"),'X', 'Y', colors=list("kb"), title='Bar Chart')
 
 The best way to go deeper is to look at the examples notebooks:
 
-- [quick-start notebook](https://raw.githubusercontent.com/awslabs/plit/main/notebooks/quick-start.ipynb) gives an overview of core
+- [quick-start notebook](https://github.com/awslabs/plit/blob/main/notebooks/quick-start.ipynb) gives an overview of core
   functionality including creating core chart types.
-- [plit-vs-matplotlib](https://raw.githubusercontent.com/awslabs/plit/main/notebooks/plit-vs-matplotlib.ipynb) shows the difference
+- [plit-vs-matplotlib](https://github.com/awslabs/plit/blob/main/notebooks/plit-vs-matplotlib.ipynb) shows the difference
   between matplotlib and plit with a simple example.
-- [creating-templates-file](https://raw.githubusercontent.com/awslabs/plit/main/notebooks/creating-templates.ipynb) demonstrates
+- [creating-templates-file](https://github.com/awslabs/plit/blob/main/notebooks/creating-templates.ipynb) demonstrates
   how to use partial functions to simplify and streamline your visualization
 workflow.
-- [accuracy-vs-coverage](https://raw.githubusercontent.com/awslabs/plit/main/notebooks/accuracy-vs-coverage.ipynb) shows an illustrative
+- [accuracy-vs-coverage](https://github.com/awslabs/plit/blob/main/notebooks/accuracy-vs-coverage.ipynb) shows an illustrative
   example using a template created for visualizing accuracy and coverage.
-- [precision-vs-recall](https://raw.githubusercontent.com/awslabs/plit/main/notebooks/precision-recall-curve.ipynb) shows an illustrative
+- [precision-vs-recall](https://github.com/awslabs/plit/blob/main/notebooks/precision-recall-curve.ipynb) shows an illustrative
   example using a template created for choosing a threshold using precision and
 recall. 
-- [softmax-calibration](https://raw.githubusercontent.com/awslabs/plit/main/notebooks/softmax-calibration.ipynb) shows an illustrative
+- [softmax-calibration](https://github.com/awslabs/plit/blob/main/notebooks/softmax-calibration.ipynb) shows an illustrative
   example using a template created for evaluating the calibration for softmax
 output. 
