@@ -4,7 +4,8 @@
 undifferentiated heavy-lifting of writing boilerplate code while maintaining
 the power and feel of Matplotlib. 
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg) ![Documentation Status](https://readthedocs.org/projects/plit/badge/?version=latest)](https://plit.readthedocs.io/en/latest/?badge=latest)
+![](https://img.shields.io/badge/License-Apache%202.0-blue.svg) 
+![](https://readthedocs.org/projects/plit/badge/?version=latest)
 
 There are two components to `plit`:
 * **Wrappers** around core chart types for standard line, scatter, histograms, and
