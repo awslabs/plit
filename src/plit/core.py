@@ -39,7 +39,7 @@ def hist(
     figname=None,
     **kwargs,
 ):
-    """Create a simple histogram.
+    """Create a histogram.
 
     Args:
         x (list:arrays): list of data arrays to create bins and counts for.
