@@ -18,6 +18,7 @@ setup(
     cmdclass=versioneer.get_cmdclass(),
     description="A wrapper for automating common matplotlib tasks",
     long_description=read("README.md"),
+    long_description_content_type="text/markdown",
     url="https://github.com/awslabs/plit",
     keywords="plit visualization data science analytics analysis matplotlib",
     author="Josiah Davis",
