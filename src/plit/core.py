@@ -20,7 +20,6 @@ config = json.load(stream)
 
 COLORS = config["colors"]
 VISUAL_DIR = config["visual_dir"]
-print("ls ../", os.listdir("../"))
 STYLESHEET = config["stylesheet"]
 plt.style.use(os.path.join(os.path.dirname(__file__), STYLESHEET))
 
