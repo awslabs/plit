@@ -9,18 +9,20 @@ Includes plot (for line chart and scatter), hist, and bar.
 from functools import partial
 import matplotlib.ticker as mtick
 import matplotlib.pyplot as plt
+import pkg_resources
 import numpy as np
 import os
 
 import json
 
-with open("../config/general.json") as file:
-    config = json.load(file)
+stream = pkg_resources.resource_stream(__name__, "config/general.json")
+config = json.load(stream)
 
 COLORS = config["colors"]
 VISUAL_DIR = config["visual_dir"]
+print("ls ../", os.listdir("../"))
 STYLESHEET = config["stylesheet"]
-plt.style.use(STYLESHEET)
+plt.style.use(os.path.join(os.path.dirname(__file__), STYLESHEET))
 
 
 def hist(

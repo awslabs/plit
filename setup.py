@@ -12,6 +12,8 @@ setup(
     name="plit",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
+    package_data={"": ["config/general.json", "config/default.mplstyle"]},
+    include_package_data=True,
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
     description="A wrapper for automating common matplotlib tasks",
