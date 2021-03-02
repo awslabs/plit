@@ -9,7 +9,7 @@ def read(fname):
 
 
 setup(
-    name="plit-josiahdavis",
+    name="plitlib",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     package_data={"": ["config/general.json", "config/default.mplstyle"]},
