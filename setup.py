@@ -9,7 +9,7 @@ def read(fname):
 
 
 setup(
-    name="plit",
+    name="plitlib",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     package_data={"": ["config/general.json", "config/default.mplstyle"]},
@@ -19,7 +19,7 @@ setup(
     description="A wrapper for automating common matplotlib tasks",
     long_description=read("README.md"),
     url="https://github.com/awslabs/plit",
-    keywords="visualization data science analytics analysis matplotlib",
+    keywords="plit visualization data science analytics analysis matplotlib",
     author="Josiah Davis",
     license="Apache 2.0",
     python_requires=">=3.6.0",
