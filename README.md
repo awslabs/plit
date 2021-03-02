@@ -7,7 +7,7 @@ the power and feel of Matplotlib.
 ![](https://img.shields.io/badge/License-Apache%202.0-blue.svg) 
 ![](https://readthedocs.org/projects/plit/badge/?version=latest)
 ![](https://img.shields.io/badge/code_style-black-000000.svg)
-<!-- ![](https://img.shields.io/github/v/release/awslabs/plit.svg) -->
+![](https://img.shields.io/github/v/release/awslabs/plit.svg)
 
 There are two components to `plit`:
 * **Wrappers** around core chart types for standard line, scatter, histograms, and
@@ -22,11 +22,8 @@ See the [PRFAQ](PRFAQ.md) for more information.
 
 # Install
 
-```Python
-git clone https://github.com/awslabs/plit.git
-cd plit
-pip install -r requirements.txt
-pip install .
+```
+pip install plitlib
 ```
 
 # Quick Start 
