@@ -6,6 +6,5 @@
     "r",
     "c"
   ],
-  "stylesheet": "config/default.mplstyle",
-  "visual_dir": "../figures"
+  "stylesheet": "config/default.mplstyle"
 }

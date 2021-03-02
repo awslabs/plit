@@ -19,7 +19,6 @@ stream = pkg_resources.resource_stream(__name__, "config/general.json")
 config = json.load(stream)
 
 COLORS = config["colors"]
-VISUAL_DIR = config["visual_dir"]
 STYLESHEET = config["stylesheet"]
 plt.style.use(os.path.join(os.path.dirname(__file__), STYLESHEET))
 
@@ -85,7 +84,7 @@ def hist(
     if subtitle is not None:
         ax.set_title(subtitle, loc="right", fontsize=13, color="grey")
     if figname is not None:
-        plt.savefig(os.path.join(VISUAL_DIR, figname), bbox_inches="tight")
+        plt.savefig(figname, bbox_inches="tight")
     return ax
 
 
@@ -185,7 +184,7 @@ def bar(
         else:
             ax.yaxis.set_major_formatter(mtick.PercentFormatter(xmax=1.0))
     if figname is not None:
-        plt.savefig(os.path.join(VISUAL_DIR, figname), bbox_inches="tight")
+        plt.savefig(figname, bbox_inches="tight")
     return ax
 
 
@@ -287,7 +286,7 @@ def plot(
         ax.yaxis.set_major_formatter(mtick.PercentFormatter(xmax=1.0))
     ax.legend()
     if figname is not None:
-        plt.savefig(os.path.join(VISUAL_DIR, figname), bbox_inches="tight")
+        plt.savefig(figname, bbox_inches="tight")
     return ax
 
 
