@@ -20,11 +20,17 @@ Here is an example chart created with `plit`:
 
 See the [docs](https://plit.readthedocs.io/en/latest/index.html) for more information.
 
+> Note: if you are looking for the project that manages a set of git
+> repositories, that project has been renamed to **glit**
+> ([GitHub](https://github.com/vandmo/glit),
+> [PyPi](https://pypi.org/project/glit)).
+
 # Install
 
 ```
 pip install plit
 ```
+
 
 # Quick Start 
 
