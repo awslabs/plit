@@ -18,12 +18,12 @@ Here is an example chart created with `plit`:
 
 ![](https://github.com/awslabs/plit/raw/main/figures/calibration.png)
 
-See the [PRFAQ](PRFAQ.md) for more information.
+See the [docs](https://plit.readthedocs.io/en/latest/index.html) for more information.
 
 # Install
 
 ```
-pip install plitlib
+pip install plit
 ```
 
 # Quick Start 
