@@ -17,7 +17,7 @@ from PIL import Image, ImageChops
 class SimpleMatrixPlotter(object):
     """A simple helper class to fill-in subplot one after another.
 
-    Sample usage using add():
+    Sample usage using `add()`:
 
     >>> import pandas as pd
     >>> from plit.subplots import SimpleMatrixPlotter
@@ -175,8 +175,9 @@ class SimpleMatrixPlotter(object):
 # benchmark to render 10 montages at 100 subplots/montage tops at 392MB RSS,
 # when measured on MBP early 2015 model, Mojave 10.14.6, python-3.7.6.
 #
-# from smallmatter.ds import MontagePager
 # import pandas as pd
+# from numpy.random import rand
+# from plit.subplots import MontagePager
 # mp = MontagePager()
 # for i in range(1000):
 #     title = f"chart-{i:04d}"
