@@ -20,6 +20,8 @@ class SimpleMatrixPlotter(object):
     Sample usage using add():
 
     >>> import pandas as pd
+    >>> from plit.subplots import SimpleMatrixPlotter
+    >>>
     >>> df = pd.DataFrame({'a': [1,1,1,2,2,2,3,3,3,4,4]})
     >>> gb = df.groupby(by=['a'])
     >>>
@@ -31,7 +33,7 @@ class SimpleMatrixPlotter(object):
     >>> # smp.trim(); plt.tight_layout(); plt.show()  # Uncomment to show the plot.
     >>> smp.savefig("/tmp/testfigure.png")  # After this, figure & axes are gone.
 
-    Alternative usage using pop():
+    Alternative usage using `pop()`:
 
     >>> smp = SimpleMatrixPlotter(gb.ngroups)
     >>> for group_name, df_group in gb:
@@ -168,7 +170,7 @@ class SimpleMatrixPlotter(object):
 #       this approach is not acceptable, then reset-and-reuse shall be
 #       considered.
 #
-# As of now, using pager does caps memory usage (in addition to making sure not
+# As of now, using pager does cap the memory usage (in addition to making sure not
 # to hit matplotlib limit of 2^16 pixels per figure dimension). The following
 # benchmark to render 10 montages at 100 subplots/montage tops at 392MB RSS,
 # when measured on MBP early 2015 model, Mojave 10.14.6, python-3.7.6.
@@ -204,15 +206,15 @@ class MontagePager(object):
         As such, please make sure title fits in a single line.
 
         >>> import pandas as pd
+        >>> from pathlib import Path
+        >>> from numpy.random import rand
+        >>> from plit.subplots import MontagePager
         >>>
-        >>> mp = MontagePlotter('output', savefig_kwargs=dict(transparent=False))
+        >>> mp = MontagePager(Path('output'), savefig_kwargs=dict(transparent=False))
         >>> for i in range(128):
         >>>     title = f"chart-{i:04d}"
         >>>     pd.Series(rand(6)).plot(ax=mp.pop(title), title=title)
         >>> mp.savefig()  # Save the last montage which may be partially filled.
-
-        >>> mp = MontagePlotter('output', savefig_kwargs=dict(transparent=True))
-        >>> ...
 
         Args:
             prefix (str, optional): Prefix of output filenames.
