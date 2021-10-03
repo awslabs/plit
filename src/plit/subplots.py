@@ -317,6 +317,7 @@ class MontagePager(object):
         im.save(self.montage_path / f"{self.prefix}-{self._i:04d}.png")
         self._save_pieces(im, subplot_cnt, bg_rgb)
         self._save_csv()
+        im.close()
 
     def _save_csv(self):
         """Write a row.
@@ -404,3 +405,4 @@ class MontagePager(object):
             cropped_fixed = im.crop(fixed_bbox(i))
             cropped_tight = tighten(cropped_fixed)
             cropped_tight.save(self.individual_path / f"{self._i:04d}-{i:02d}.png")
+            cropped_tight.close()
