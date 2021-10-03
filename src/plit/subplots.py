@@ -105,12 +105,28 @@ class SimpleMatrixPlotter(object):
     @property
     def ncols(self):
         """Return the number of columns."""
-        return self.axes[0].get_geometry()[1] if len(self.axes) > 0 else 0
+        if len(self.axes) < 1:
+            return 0
+
+        ax = self.axes[0]
+        if hasattr(ax, "get_gridspec"):
+            # matplotlib>=3.4.0
+            return self.axes[0].get_gridspec().ncols
+        else:
+            return self.axes[0].get_geometry()[1]
 
     @property
     def nrows(self):
         """Return the number of rows."""
-        return self.axes[0].get_geometry()[0] if len(self.axes) > 0 else 0
+        if len(self.axes) < 1:
+            return 0
+
+        ax = self.axes[0]
+        if hasattr(ax, "get_gridspec"):
+            # matplotlib>=3.4.0
+            return ax.get_gridspec().nrows
+        else:
+            return ax.get_geometry()[0]
 
     @property
     def shape(self):
