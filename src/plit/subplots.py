@@ -406,3 +406,4 @@ class MontagePager(object):
             cropped_tight = tighten(cropped_fixed)
             cropped_tight.save(self.individual_path / f"{self._i:04d}-{i:02d}.png")
             cropped_tight.close()
+            cropped_fixed.close()
