@@ -111,9 +111,9 @@ class SimpleMatrixPlotter(object):
         ax = self.axes[0]
         if hasattr(ax, "get_gridspec"):
             # matplotlib>=3.4.0
-            return self.axes[0].get_gridspec().ncols
+            return ax.get_gridspec().ncols
         else:
-            return self.axes[0].get_geometry()[1]
+            return ax.get_geometry()[1]
 
     @property
     def nrows(self):
@@ -258,11 +258,15 @@ class MontagePager(object):
         self.savefig_kwargs = savefig_kwargs
         self.smp = SimpleMatrixPlotter(**self.smp_kwargs)
         self._i = 0
-        self.itemid: List[Any] = []
-        self.csvwriter = csv.writer((path / "mappings.csv").open("w"))
-        self.csvwriter.writerow(
+        self._itemid: List[Any] = []
+        self._csv_file = (path / "mappings.csv").open("w")
+        self._csvwriter = csv.writer(self._csv_file)
+        self._csvwriter.writerow(
             ["individual", "title", "montage", "subplot", "row", "col"]
         )
+
+    def __del__(self):
+        self._csv_file.close()
 
     @property
     def i(self):
@@ -279,7 +283,7 @@ class MontagePager(object):
             self.savefig()
             self.smp = SimpleMatrixPlotter(**self.smp_kwargs)
             self._i += 1
-        self.itemid.append(subplot_id)
+        self._itemid.append(subplot_id)
         return self.smp.pop()
 
     def savefig(self):
@@ -305,7 +309,9 @@ class MontagePager(object):
             # with matplotlib 3.2.1 and 3.3.0).
             self.smp.savefig(buf, format="png", **self.savefig_kwargs)
             buf.seek(0)
-            im = Image.open(buf)
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore", Image.DecompressionBombWarning)
+                im = Image.open(buf)
             im.load()
 
         im.save(self.montage_path / f"{self.prefix}-{self._i:04d}.png")
@@ -322,13 +328,14 @@ class MontagePager(object):
         ncols = self.smp.ncols
         mtg_i = self._i
         mtg_fname = self.filename
-        for i, itemid in enumerate(self.itemid):
+        for i, itemid in enumerate(self._itemid):
             row, col = divmod(i, ncols)
             s = str(itemid).encode("unicode-escape").decode("utf-8")
-            self.csvwriter.writerow(
+            self._csvwriter.writerow(
                 (f"{mtg_i:04d}-{i:02d}.png", s, mtg_fname, i, row, col)
             )
-        self.itemid.clear()
+        self._itemid.clear()
+        self._csv_file.flush()
 
     def _save_pieces(
         self,
